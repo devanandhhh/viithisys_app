@@ -22,7 +22,7 @@ class AddCommentWidget extends StatelessWidget {
           color: iswhite ? kwhite : kgrey100,
           borderRadius: BorderRadius.circular(9)),
       child: Padding(
-        padding: const EdgeInsets.only(left: 15, right: 15, top: 30),
+        padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -73,7 +73,8 @@ class AddCommentWidget extends StatelessWidget {
                   height: 50,
                   width: MediaQuery.of(context).size.width * .65,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5), ),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
@@ -102,19 +103,20 @@ class AddCommentWidget extends StatelessWidget {
                   ),
                 ),
                 const Gap(10),
-               SizedBox(
+                SizedBox(
                   height: 80,
                   width: MediaQuery.of(context).size.width * .63,
                   child: Text(
-                      style: TextStyle(color: kgrey),
+                      style: TextStyle(color: kgrey500), 
                       "“Ipsum rhoncus nibh malesuada magnis posuere aliquam nunc orci egestas. Ut nunc at aliquet mi auctor elementum. Ultrices dui et pellentesque amet enim”"),
                 ),
 
                 //Reply
                 customizeSession(text: "Reply", isBlue: false),
-               const Gap(10),
+                const Gap(10),
                 //time
-                subText(subtext: "Friday, March 01", fontsize: 16)
+                subText(subtext: "Friday, March 01", fontsize: 14),
+                
               ],
             )
           ],

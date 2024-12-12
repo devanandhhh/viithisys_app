@@ -3,7 +3,6 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:viithiisys_app/core/colors.dart';
 import 'package:viithiisys_app/presentation/auth/first_screen.dart';
-import 'package:viithiisys_app/presentation/auth/sign_in_screen.dart';
 import 'package:viithiisys_app/widgets/footer_widget.dart';
 import 'package:viithiisys_app/widgets/main_appbar.dart';
 import 'package:viithiisys_app/presentation/auth/widgets/custom_button.dart';
@@ -73,10 +72,7 @@ class ThirdScreen extends StatelessWidget {
               ],
             ),
             const Gap(30),
-            InkWell(
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (ctx) => const SignInScreen())),
-                child: const CustomButtonWidget(text: "Continue"))
+            const CustomButtonWidget(text: "Continue")
           ],
         ),
       ),

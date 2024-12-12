@@ -21,16 +21,28 @@ class HomeScreen extends StatelessWidget {
           children: [
             Divider(color: Colors.grey),
             Padding(
-              padding: EdgeInsets.all(18.0),
+              padding:
+                  EdgeInsets.only(left: 18.0, right: 18, top: 10, bottom: 10),
               child: Column(
                 children: [
-                  AddedTaskWidget(text: "Sustainability Awareness", iswhite: false),
+                  AddedTaskWidget(
+                      text: "Sustainability Awareness", iswhite: false),
                   Gap(10),
                   AddedTaskWidget(text: "Competitive Targeting", iswhite: true),
-                  Divider(color: Colors.grey),
+                ],
+              ),
+            ),
+            Divider(color: Colors.grey),
+            Padding(
+              padding: EdgeInsets.only(left: 18.0,right: 18,),
+              child: Column(
+                children: [
+                  
                   AddCommentWidget(name: "Kristin Watson", iswhite: true),
+                  Gap(10),
                   AddCommentWidget(name: "Eleanor Pena", iswhite: false),
-                  AddedTaskWidget(text: "Sustainability Awareness", iswhite: true),
+                  AddedTaskWidget(
+                      text: "Sustainability Awareness", iswhite: true),
                   Gap(20)
                 ],
               ),
@@ -54,7 +66,7 @@ class HomeScreen extends StatelessWidget {
       ),
       title: Text(
         "Notifications",
-        style: GoogleFonts.aBeeZee(fontSize: 22, color: kbluegrey),
+        style: GoogleFonts.aBeeZee(fontSize: 22, color: Colors.grey[600]),
       ),
       actions: [
         Container(

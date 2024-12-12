@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:viithiisys_app/presentation/auth/first_screen.dart';
+import 'package:viithiisys_app/presentation/main_page.dart';
 
 
 void main() {
@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
         title: 'Viithisys App',
         debugShowCheckedModeBanner: false,
-        home: FirstScreen());
+        home: MainPage());
   }
 }

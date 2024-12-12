@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:viithiisys_app/core/colors.dart';
 import 'package:viithiisys_app/presentation/auth/widgets/custom_button.dart';
-import 'package:viithiisys_app/presentation/home/home_screen.dart';
 import 'package:viithiisys_app/widgets/custom_text_field.dart';
 import 'package:viithiisys_app/widgets/footer_widget.dart';
 import 'package:viithiisys_app/widgets/main_appbar.dart';
@@ -51,7 +50,7 @@ class SignInScreen extends StatelessWidget {
 
   Widget loginDialogBox(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * .53,
+      height: 450,
       width: MediaQuery.of(context).size.width * .86,
       decoration:
           BoxDecoration(color: kwhite, borderRadius: BorderRadius.circular(11)),
@@ -103,7 +102,7 @@ class SignInScreen extends StatelessWidget {
                   ],
                 ),
                 const Gap(30),
-                InkWell(onTap: ()=>Navigator.push(context,MaterialPageRoute(builder: (ctx)=>const HomeScreen())), child: const CustomButtonWidget(text: "Sign In"))
+                const CustomButtonWidget(text: "Sign In")
               ],
             ),
           )

@@ -18,13 +18,13 @@ class AddedTaskWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160,
+      height: 130,
       width: double.infinity,
       decoration: BoxDecoration(
           color: iswhite != true ? kgrey100 : kwhite,
           borderRadius: BorderRadius.circular(9)),
       child: Padding(
-        padding: const EdgeInsets.only(left: 18, right: 18, top: 30),
+        padding: const EdgeInsets.only(left: 18, right: 18, top: 20,),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

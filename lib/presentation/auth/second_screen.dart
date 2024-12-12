@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:viithiisys_app/core/colors.dart';
 import 'package:viithiisys_app/presentation/auth/first_screen.dart';
-import 'package:viithiisys_app/presentation/auth/third_screen.dart';
 import 'package:viithiisys_app/widgets/custom_hint_widget.dart';
 import 'package:viithiisys_app/widgets/custom_text_field.dart';
 import 'package:viithiisys_app/widgets/footer_widget.dart';
@@ -38,12 +37,7 @@ class SecondScreen extends StatelessWidget {
             const Gap(10),
             customBillingContryTextField(),
             const Gap(30),
-            InkWell(
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ThirdScreen())),
-                child: const CustomButtonWidget(text: "Continue")),
+            const CustomButtonWidget(text: "Continue"),
           ],
         ),
       ),
