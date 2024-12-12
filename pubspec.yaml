@@ -70,6 +70,14 @@ flutter:
     - assets/images/ladyImage.png
     - assets/images/secondLadyimage.png
     - assets/icons/expand_icon.png
+    - assets/icons/lock_icon.png
+    - assets/icons/file_icon.png
+    - assets/icons/question_mark.png
+    - assets/icons/grey_lock.png
+    - assets/icons/grey_file.png
+    - assets/icons/grey_question.png
+    - assets/icons/notification_icon.png
+    - assets/icons/off-button.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

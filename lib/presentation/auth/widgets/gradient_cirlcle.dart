@@ -9,22 +9,22 @@ class GradientCircleAvathar extends StatelessWidget {
   final double width;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container( 
       width: width,
       height: height,
       decoration: BoxDecoration(
         border: Border.all(color: kgrey),
         shape: BoxShape.circle,
-        gradient: const LinearGradient(
-          colors: [Colors.grey, Colors.white],
+        gradient:  LinearGradient(
+          colors: [hintTextColor,kwhite,kwhite],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),
       ),
       child: Center(
         child: Container(
-          width: 30,
-          height: 30,
+          width: 33,
+          height: 33, 
           decoration: BoxDecoration(
             color: kwhite,
             shape: BoxShape.circle,

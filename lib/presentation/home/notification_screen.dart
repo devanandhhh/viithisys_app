@@ -45,7 +45,7 @@ class NotificationScreen extends StatelessWidget {
                   AddCommentWidget(name: "Eleanor Pena", iswhite: false),
                   AddedTaskWidget(
                       text: "Sustainability Awareness", iswhite: true),
-                  Gap(20)
+                  Gap(70)
                 ],
               ),
             )
@@ -60,15 +60,22 @@ class NotificationScreen extends StatelessWidget {
       backgroundColor: kwhite,
       leading: Padding(
         padding: const EdgeInsets.only(left: 35.0),
-        child: Icon(
-          Icons.notifications_active_outlined,
-          color: kgrey,
-          size: 25,
+        child: Container(
+          height: 20,
+          width: 30,
+          decoration:const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/icons/notification_icon.png",),)),
         ),
+        // child: Icon(
+        //   Icons.notifications_active_outlined,
+        //   color: kgrey,
+        //   size: 25,
+        // ),
       ),
       title: Text(
         "Notifications",
-        style: GoogleFonts.aBeeZee(fontSize: 22, color: Colors.grey[600]),
+        style: GoogleFonts.interTight(fontSize: 22, color:hintTextColor),
       ),
       actions: [
         Container(

@@ -42,21 +42,17 @@ class AddCommentWidget extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
-                      name,
-                      style: GoogleFonts.roboto(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    interTightStyle(
+                        text: name,
+                        fontsize: 14,
+                        weightFont: FontWeight.w500,
+                        colorName: kBlack),
                     const Gap(3),
-                    Text(
-                      "commented on a task",
-                      style: GoogleFonts.roboto(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13,
-                          color: kgrey),
-                    ),
+                    interTightStyle(
+                        text: "commented on a task",
+                        fontsize: 14,
+                        weightFont: FontWeight.w400,
+                        colorName: hintTextColor),
                     const Gap(26),
                     Transform.rotate(
                         angle: pi / 2,
@@ -76,7 +72,7 @@ class AddCommentWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 1.0,top: 9),
+                    padding: const EdgeInsets.only(left: 1.0, top: 9),
                     child: Column(
                       children: [
                         Row(
@@ -86,7 +82,7 @@ class AddCommentWidget extends StatelessWidget {
                               height: 34,
                               width: 3,
                               decoration: BoxDecoration(
-                                color: Colors.purple[100],
+                                color: kdarkbox,
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             ),
@@ -102,12 +98,12 @@ class AddCommentWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-                
+
                 SizedBox(
                   height: 80,
                   width: MediaQuery.of(context).size.width * .63,
                   child: Text(
-                      style: TextStyle(color: kgrey500), 
+                      style: TextStyle(color: kgrey500),
                       "“Ipsum rhoncus nibh malesuada magnis posuere aliquam nunc orci egestas. Ut nunc at aliquet mi auctor elementum. Ultrices dui et pellentesque amet enim”"),
                 ),
 
@@ -115,8 +111,8 @@ class AddCommentWidget extends StatelessWidget {
                 customizeSession(text: "Reply", isBlue: false),
                 const Gap(10),
                 //time
-                subText(subtext: "Friday, March 01", fontsize: 14),
-                
+                subText(
+                    subtext: "Friday, March 01", fontsize: 14, kcolor: kgrey),
               ],
             )
           ],

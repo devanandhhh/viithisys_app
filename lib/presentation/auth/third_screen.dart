@@ -21,19 +21,19 @@ class ThirdScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             numberPartSession("3/3"),
-            styleTextBold(text: "Customize your workspace", fontsize: 30),
-            const Gap(20),
+            interTightStyle(text: "Customize your workspace", fontsize: 25,weightFont: FontWeight.w700,colorName: kBlack),
+            const Gap(18),
             SizedBox(
               height: 60,
               width: double.infinity,
               child: subText(
                   subtext:
                       "You can easily create workflows for virtually any use case. We’ve got dozens of templates to get you started, or you can start with a blank canvas",
-                  fontsize: 17),
+                  fontsize: 16, kcolor: hintTextColor,),
             ),
-            const Gap(20),
-            styleTextBold(
-                text: "What will you be using Clario for?", fontsize: 20),
+            const Gap(18),
+            interTightStyle(colorName: kBlack,weightFont: FontWeight.w700,
+                text: "What will you be using Clario for?", fontsize: 19), 
             const Gap(15),
             Row(
               children: [
@@ -57,8 +57,8 @@ class ThirdScreen extends StatelessWidget {
             const Gap(10),
             customizeSession(text: "Fundraising", isBlue: false),
             const Gap(15),
-            styleTextBold(
-                text: "What are you working on at the moment?", fontsize: 20),
+            interTightStyle(
+                text: "What are you working on at the moment?", fontsize: 19,colorName: kBlack,weightFont: FontWeight.w700  ),
             const Gap(10),
             Row(
               children: [
@@ -76,7 +76,7 @@ class ThirdScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: footerWidget(context, subtext: "© 2024 Clario"),
+      bottomNavigationBar: footerWidget(context, subtext: "© 2024 Clario",isGrey: false),
     );
   }
 
@@ -90,12 +90,12 @@ Container customizeSession(
       decoration: BoxDecoration(
           color: isBlue == true ? Colors.lightBlue[50] : kwhite,
           borderRadius: BorderRadius.circular(9),
-          border: Border.all(color: isBlue == true ? Colors.blue : kgrey)),
+          border: Border.all(color: isBlue == true ? kSelectedBlue : kgrey)),
       child: Center(
         child: Text(
           text,
           style: GoogleFonts.aBeeZee(
-              color: isBlue == true ? Colors.lightBlue : kgrey500,
+              color: isBlue == true ? kSelectedBlue : hintTextColor,
               fontWeight: FontWeight.bold),
         ),
       ),

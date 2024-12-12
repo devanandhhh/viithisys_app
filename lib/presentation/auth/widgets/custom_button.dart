@@ -19,7 +19,7 @@ class CustomButtonWidget extends StatelessWidget {
         child: Text(
           text,
           style: GoogleFonts.aBeeZee(
-              fontSize: 25, color: kwhite, fontWeight: FontWeight.bold),
+              fontSize: 19, color: kwhite, fontWeight: FontWeight.bold),
         ),
       ),
     );

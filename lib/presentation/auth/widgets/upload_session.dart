@@ -18,7 +18,7 @@ class UploadSession extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 25,
-              backgroundColor: kgrey,
+              backgroundColor: kborderColor,
               child: CircleAvatar(
                 radius: 23,
                 backgroundColor: kwhite,
@@ -30,7 +30,7 @@ class UploadSession extends StatelessWidget {
               height: 41,
               width: MediaQuery.of(context).size.width * .3,
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey, width: 2),
+                  border: Border.all(color:kborderColor, width: 2),
                   //color: klightblue,
                   borderRadius: BorderRadius.circular(9)),
               child: Row(
@@ -42,7 +42,7 @@ class UploadSession extends StatelessWidget {
                   ),
                   Text(
                     'Add Image',
-                    style: GoogleFonts.aBeeZee(
+                    style: GoogleFonts.interTight(
                         fontSize: 14, fontWeight: FontWeight.bold),
                   )
                 ],

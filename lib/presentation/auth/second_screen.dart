@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:viithiisys_app/core/colors.dart';
 import 'package:viithiisys_app/presentation/auth/first_screen.dart';
 import 'package:viithiisys_app/widgets/custom_hint_widget.dart';
@@ -23,7 +24,7 @@ class SecondScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             numberPartSession("2/3"),
-            styleTextBold(text: "Create your workspace", fontsize: 30),
+            interTightStyle(text: "Create your workspace", fontsize: 25,weightFont: FontWeight.w700,colorName: kBlack),
             const UploadSession(),
             const CustomHintText(name: "Workspace name"),
             const Gap(10),
@@ -41,7 +42,7 @@ class SecondScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: footerWidget(context, subtext: "© 2024 Clario"),
+      bottomNavigationBar: footerWidget(context, subtext: "© 2024 Clario",isGrey: false),
     );
   }
 
@@ -57,6 +58,9 @@ class SecondScreen extends StatelessWidget {
           ),
         ),
         hintText: "United States",
+        hintStyle: GoogleFonts.interTight(
+          fontSize: 16,
+        ),
         suffixIcon: const Icon(Icons.keyboard_arrow_down_rounded),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
       ),

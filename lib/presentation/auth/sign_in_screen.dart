@@ -16,7 +16,7 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: mainAppbar(true),
-      backgroundColor: Colors.blueGrey[50],
+      backgroundColor:const Color(0xFFF8F9FB),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -27,24 +27,24 @@ class SignInScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
-                    "Don’t have an account?",
-                    style: TextStyle(fontSize: 17, letterSpacing: 2),
-                  ),
-                  Text(
-                    " Sign Up",
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: kmainColor),
-                  )
+                  interTightStyle(
+                      text: "Don’t have an account?",
+                      fontsize: 19,
+                      weightFont: FontWeight.w400, 
+                      colorName: kBlack),
+                  const Gap(3),
+                  interTightStyle(
+                      text: "Sign Up",
+                      fontsize: 17,
+                      weightFont: FontWeight.w300,
+                      colorName: kmainColor)
                 ],
               )
             ],
           ),
         ),
       ),
-      bottomNavigationBar: footerWidget(context, subtext: "© 2024 Clario"),
+      bottomNavigationBar: footerWidget(context, subtext: "© 2024 Clario",isGrey: true),
     );
   }
 
@@ -52,18 +52,27 @@ class SignInScreen extends StatelessWidget {
     return Container(
       height: 450,
       width: MediaQuery.of(context).size.width * .86,
-      decoration:
-          BoxDecoration(color: kwhite, borderRadius: BorderRadius.circular(11)),
+      decoration: BoxDecoration(
+        color: kwhite,
+        borderRadius: BorderRadius.circular(11),
+      ),
       child: Column(
         children: [
           const Gap(15),
           const GradientCircleAvathar(
-            height: 50,
-            width: 50,
+            height: 61,
+            width: 61,
           ),
-          styleTextBold(text: "Login to your account", fontsize: 22),
+          interTightStyle(
+              text: "Login to your account",
+              fontsize: 22,
+              colorName: kBlack,
+              weightFont: FontWeight.w700),
           const Gap(4),
-          subText(subtext: "Enter your details to login", fontsize: 15),
+          subText(
+              subtext: "Enter your details to login",
+              fontsize: 15,
+              kcolor: kgrey),
           Padding(
             padding: const EdgeInsets.only(left: 15.0, right: 15),
             child: Column(
@@ -87,18 +96,22 @@ class SignInScreen extends StatelessWidget {
                           height: 13,
                           width: 13,
                           decoration: BoxDecoration(
-                              border: Border.all(),
+                              border: Border.all(color: hintTextColor),
                               borderRadius: BorderRadius.circular(2)),
                         ),
                         const Gap(5),
-                        const Text("Keep me logged in"),
+                        interTightStyle(
+                            text: "Keep me logged in",
+                            fontsize: 13,
+                            weightFont: FontWeight.w100,
+                            colorName: kBlack),
                       ],
                     ),
-                    Text(
-                      "Forgot Passoword?",
-                      style: TextStyle(
-                          color: kmainColor, fontWeight: FontWeight.bold),
-                    )
+                    interTightStyle(
+                        text: "Forgot Password?",
+                        fontsize: 16,
+                        weightFont: FontWeight.w400,
+                        colorName: kmainColor)
                   ],
                 ),
                 const Gap(30),

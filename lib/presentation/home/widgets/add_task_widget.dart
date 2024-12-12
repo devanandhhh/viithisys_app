@@ -44,7 +44,7 @@ class AddedTaskWidget extends StatelessWidget {
                   children: [
                     Text(
                       "Eleanor Pena",
-                      style: GoogleFonts.roboto(
+                      style: GoogleFonts.interTight(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -52,7 +52,7 @@ class AddedTaskWidget extends StatelessWidget {
                     const Gap(3),
                     Text(
                       "added you to a task",
-                      style: GoogleFonts.roboto(
+                      style: GoogleFonts.interTight(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
                           color: kgrey),
@@ -75,7 +75,7 @@ class AddedTaskWidget extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * .65,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      border: Border.all(color: Colors.grey),
+                      border: Border.all(color:kborderColor),
                       color: kwhite),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -86,15 +86,15 @@ class AddedTaskWidget extends StatelessWidget {
                           height: 25,
                           width: 25,
                           decoration: BoxDecoration(
-                            color: Colors.purple[50],
+                            color: klightbox,
                             borderRadius: BorderRadius.circular(5),
                           ),
-                          child: const Padding(
-                            padding: EdgeInsets.only(bottom: 2, top: 2),
+                          child:  Padding(
+                            padding:const EdgeInsets.only(bottom: 2, top: 2),
                             child: Icon(
                               Icons.check_box_outlined,
                               size: 15,
-                              color: Color.fromARGB(255, 131, 110, 170),
+                              color: kdarkbox
                             ),
                           ),
                         ),
@@ -102,7 +102,7 @@ class AddedTaskWidget extends StatelessWidget {
                         Text(
                           text,
                           style:
-                              GoogleFonts.aBeeZee(fontWeight: FontWeight.bold),
+                              GoogleFonts.interTight(fontWeight: FontWeight.bold),
                         )
                       ],
                     ),
@@ -111,7 +111,7 @@ class AddedTaskWidget extends StatelessWidget {
                 const Gap(10),
 
                 //time
-                subText(subtext: "3 hours ago", fontsize: 16)
+                subText(subtext: "3 hours ago", fontsize: 16,kcolor: kgrey)
               ],
             )
           ],

@@ -27,21 +27,29 @@ class FirstScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               numberPartSession('1/3'),
-              styleTextBold(text: "Let's get you know", fontsize: 30),
+              interTightStyle(
+                  text: "Let's get you know",
+                  fontsize: 25,
+                  weightFont: FontWeight.w700,
+                  colorName: kBlack),
               const UploadSession(),
               const CustomHintText(name: 'First name'),
-              const Gap(10),
+              const Gap(14),
               const CustomTextField(text: 'John'),
-              const Gap(10),
+              const Gap(14),
               const CustomHintText(name: 'Last name'),
-              const Gap(10),
+              const Gap(14),
               const CustomTextField(text: 'Doe'),
-              const Gap(10),
+              const Gap(14),
               const CustomHintText(name: 'Email'),
-              const Gap(10),
+              const Gap(14),
               const CustomTextField(text: 'johndeo@mail.com'),
-              const Gap(30),
-              styleTextBold(text: 'Subscribe to product update', fontsize: 20),
+              const Gap(20),
+              interTightStyle(
+                  text: 'Subscribe to product update',
+                  fontsize: 16,
+                  weightFont: FontWeight.w700,
+                  colorName: kBlack),
               const Gap(4),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,14 +60,14 @@ class FirstScreen extends StatelessWidget {
                     child: subText(
                         subtext:
                             "Get the latest updates about features and products updates.",
-                        fontsize: 15),
+                        fontsize: 15,
+                        kcolor: hintTextColor),
                   ),
                   Column(
                     children: [
-                      Icon(
-                        Icons.toggle_off,
-                        color: kgrey,
-                        size: 38,
+                      Image.asset(
+                        "assets/icons/off-button.png",
+                        scale: 14,
                       ),
                       const Gap(20)
                     ],
@@ -71,7 +79,8 @@ class FirstScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: footerWidget(context, subtext: "© 2024 Clario"),
+      bottomNavigationBar:
+          footerWidget(context, subtext: "© 2024 Clario", isGrey: false),
     );
   }
 }
@@ -79,6 +88,6 @@ class FirstScreen extends StatelessWidget {
 Text numberPartSession(String number) {
   return Text(
     number,
-    style: GoogleFonts.roboto(fontSize: 20, color: kgrey),
+    style: GoogleFonts.roboto(fontSize: 16, color: hintTextColor),
   );
 }

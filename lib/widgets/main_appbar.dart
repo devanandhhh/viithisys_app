@@ -4,7 +4,7 @@ import 'package:viithiisys_app/core/colors.dart';
 
 AppBar mainAppbar([bool? isNotwhite=false]) {
     return AppBar(
-      backgroundColor:isNotwhite!=true? kwhite: Colors.blueGrey[50],
+      backgroundColor:isNotwhite!=true? kwhite:const Color(0xFFF8F9FB),
       leading: Padding(
         padding: const EdgeInsets.only(left: 20),
         child: Container(
@@ -17,7 +17,7 @@ AppBar mainAppbar([bool? isNotwhite=false]) {
       ),
       title: Text(
         'Clario',
-        style: GoogleFonts.aBeeZee(fontSize: 30, fontWeight: FontWeight.bold),
+        style: GoogleFonts.poppins(fontSize: 30, fontWeight: FontWeight.w600), 
       ),
     );
   }
