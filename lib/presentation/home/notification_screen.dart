@@ -8,8 +8,8 @@ import 'package:viithiisys_app/presentation/home/widgets/add_task_widget.dart';
 import '../../core/colors.dart';
 import 'widgets/add_comment_widget.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class NotificationScreen extends StatelessWidget {
+  const NotificationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +34,12 @@ class HomeScreen extends StatelessWidget {
             ),
             Divider(color: Colors.grey),
             Padding(
-              padding: EdgeInsets.only(left: 18.0,right: 18,),
+              padding: EdgeInsets.only(
+                left: 18.0,
+                right: 18,
+              ),
               child: Column(
                 children: [
-                  
                   AddCommentWidget(name: "Kristin Watson", iswhite: true),
                   Gap(10),
                   AddCommentWidget(name: "Eleanor Pena", iswhite: false),
@@ -87,14 +89,10 @@ class HomeScreen extends StatelessWidget {
           height: 25,
           width: 25,
           decoration: BoxDecoration(
+              image: const DecorationImage(
+                  image: AssetImage("assets/icons/expand_icon.png")),
               borderRadius: BorderRadius.circular(5),
               border: Border.all(color: kgrey)),
-          child: Transform.rotate(
-              angle: pi / 4,
-              child: Icon(
-                Icons.expand,
-                color: kgrey,
-              )),
         ),
         const Gap(5),
         Container(

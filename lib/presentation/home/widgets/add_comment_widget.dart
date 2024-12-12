@@ -16,7 +16,7 @@ class AddCommentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 280,
+      height: 250,
       width: double.infinity,
       decoration: BoxDecoration(
           color: iswhite ? kwhite : kgrey100,
@@ -67,7 +67,7 @@ class AddCommentWidget extends StatelessWidget {
                         ))
                   ],
                 ),
-                const Gap(10),
+                //const Gap(10),
                 // box here
                 Container(
                   height: 50,
@@ -76,14 +76,14 @@ class AddCommentWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(left: 1.0,top: 9),
                     child: Column(
                       children: [
                         Row(
                           children: [
                             //purple box
                             Container(
-                              height: 32,
+                              height: 34,
                               width: 3,
                               decoration: BoxDecoration(
                                 color: Colors.purple[100],
@@ -102,7 +102,7 @@ class AddCommentWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Gap(10),
+                
                 SizedBox(
                   height: 80,
                   width: MediaQuery.of(context).size.width * .63,

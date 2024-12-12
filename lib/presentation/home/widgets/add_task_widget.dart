@@ -86,7 +86,7 @@ class AddedTaskWidget extends StatelessWidget {
                           height: 25,
                           width: 25,
                           decoration: BoxDecoration(
-                            color: Colors.purple[100],
+                            color: Colors.purple[50],
                             borderRadius: BorderRadius.circular(5),
                           ),
                           child: const Padding(
@@ -94,7 +94,7 @@ class AddedTaskWidget extends StatelessWidget {
                             child: Icon(
                               Icons.check_box_outlined,
                               size: 15,
-                              color: Color.fromARGB(255, 95, 67, 148),
+                              color: Color.fromARGB(255, 131, 110, 170),
                             ),
                           ),
                         ),

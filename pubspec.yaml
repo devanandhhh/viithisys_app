@@ -69,6 +69,7 @@ flutter:
     - assets/icons/three_dots.png
     - assets/images/ladyImage.png
     - assets/images/secondLadyimage.png
+    - assets/icons/expand_icon.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
