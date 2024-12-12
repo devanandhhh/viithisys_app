@@ -84,7 +84,9 @@ class ThirdScreen extends StatelessWidget {
     );
   }
 
-  Container customizeSession(
+  
+}
+Container customizeSession(
       {required String text, required bool isBlue, double? kwidth}) {
     return Container(
       height: 40,
@@ -103,4 +105,4 @@ class ThirdScreen extends StatelessWidget {
       ),
     );
   }
-}
+
