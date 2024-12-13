@@ -17,5 +17,11 @@ Color klightbox = const Color(0xFFF4F0FF);
 Color kdarkbox =const Color(0xFF936DFF);
 
 Color kborderColor = const Color(0xFFDFE1E6);
+Color kIncrementColor =const Color(0xFF40C4AA);
+const Color kDecrementColor = Color(0xFFDF1C41);
+
+Color kGreyLight =Color(0xFFF8F9FB);
+const Color kbluelight =Color(0xFF33CFFF);
+
 
 

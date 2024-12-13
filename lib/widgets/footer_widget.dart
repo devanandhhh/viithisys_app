@@ -101,5 +101,5 @@ Text interTightStyle(
     Text(
       text,
       style: GoogleFonts.interTight(
-          fontSize: fontsize, fontWeight: FontWeight.w700, color: colorName),
+          fontSize: fontsize, fontWeight:weightFont, color: colorName),
     );

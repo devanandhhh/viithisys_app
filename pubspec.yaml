@@ -78,6 +78,21 @@ flutter:
     - assets/icons/grey_question.png
     - assets/icons/notification_icon.png
     - assets/icons/off-button.png
+    - assets/icons/menu.png
+    - assets/images/lady3image.png
+    - assets/images/menImage1.png
+    - assets/icons/three-dots.png
+    - assets/icons/callender_icon.png
+    - assets/icons/retry_icon.png
+    - assets/icons/filter_icon.png
+    - assets/icons/green_download2.png
+    - assets/icons/green_downarrow2.png
+    - assets/icons/blue_coin.png
+    - assets/icons/round_arrow1.png
+    - assets/icons/graph_icon.png
+    - assets/icons/blue_person.png
+    - assets/icons/pig_icon.png
+    
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

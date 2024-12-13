@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:viithiisys_app/presentation/home/widgets/add_task_widget.dart';
+import 'package:viithiisys_app/presentation/notification_screen/widgets/add_task_widget.dart';
 
 import '../../core/colors.dart';
 import 'widgets/add_comment_widget.dart';
@@ -67,11 +67,7 @@ class NotificationScreen extends StatelessWidget {
               image: DecorationImage(
                   image: AssetImage("assets/icons/notification_icon.png",),)),
         ),
-        // child: Icon(
-        //   Icons.notifications_active_outlined,
-        //   color: kgrey,
-        //   size: 25,
-        // ),
+        
       ),
       title: Text(
         "Notifications",
