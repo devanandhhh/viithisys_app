@@ -93,7 +93,7 @@ Text styleTextBold({required text, required double fontsize}) => Text(
         fontWeight: FontWeight.bold,
       ),
     );
-Text interTightStyle(
+ Widget interTightStyle(
         {required text,
         required double fontsize,
         required FontWeight weightFont,

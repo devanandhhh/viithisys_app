@@ -44,7 +44,7 @@ class AddCommentWidget extends StatelessWidget {
                   children: [
                     interTightStyle(
                         text: name,
-                        fontsize: 14,
+                        fontsize: 16,
                         weightFont: FontWeight.w500,
                         colorName: kBlack),
                     const Gap(3),

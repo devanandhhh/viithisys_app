@@ -20,8 +20,13 @@ Color kborderColor = const Color(0xFFDFE1E6);
 Color kIncrementColor =const Color(0xFF40C4AA);
 const Color kDecrementColor = Color(0xFFDF1C41);
 
-Color kGreyLight =Color(0xFFF8F9FB);
+Color kGreyLight =const Color(0xFFF8F9FB);
 const Color kbluelight =Color(0xFF33CFFF);
+
+Color lightMarketing = const Color(0xFFEDEEFD);
+Color lightInternal = const Color(0xFFF0FBFF);
+
+
 
 
 

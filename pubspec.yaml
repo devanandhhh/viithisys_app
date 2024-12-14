@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts: ^6.2.1
   gap: ^3.0.1
+  fl_chart: ^0.69.2
 
 dev_dependencies:
   flutter_test:
@@ -92,6 +93,17 @@ flutter:
     - assets/icons/graph_icon.png
     - assets/icons/blue_person.png
     - assets/icons/pig_icon.png
+    - assets/icons/retry_grey.png
+    - assets/icons/search_grey.png
+    - assets/images/menImage2.png
+    - assets/logo/facebook.png
+    - assets/logo/facebook_logo.png
+    - assets/logo/klarna_logo.png
+    - assets/logo/trello_logo.png
+    - assets/logo/xing_logo.png
+    - assets/images/ladyimage3.png
+    - assets/logo/sound_cloud.png
+    - assets/icons/callender7.png
     
   #   - images/a_dot_ham.jpeg
 

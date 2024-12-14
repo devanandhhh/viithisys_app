@@ -10,9 +10,9 @@ class CustomHintText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       name,
-      style: GoogleFonts.inter(
-          fontSize: 16,
-          fontWeight: FontWeight.w600, 
+      style: GoogleFonts.interTight(
+          fontSize: 15,
+          fontWeight: FontWeight.w500, 
           color: hintTextColor ,
           letterSpacing: 0),
     );

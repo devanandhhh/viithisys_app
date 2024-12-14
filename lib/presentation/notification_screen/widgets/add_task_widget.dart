@@ -46,16 +46,16 @@ class AddedTaskWidget extends StatelessWidget {
                       "Eleanor Pena",
                       style: GoogleFonts.interTight(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,color: kBlack,
                       ),
                     ),
                     const Gap(3),
                     Text(
                       "added you to a task",
                       style: GoogleFonts.interTight(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                          color: kgrey),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                          color: hintTextColor),
                     ),
                     const Gap(26),
                     Transform.rotate(
