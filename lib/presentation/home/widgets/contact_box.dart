@@ -7,7 +7,7 @@ import 'package:viithiisys_app/presentation/home/widgets/revenue_box.dart';
 import '../../../core/colors.dart';
 import '../../../widgets/footer_widget.dart';
 
-Column contactBox() {
+Column contactBox({required bool isSkelton}) {
   return Column(
     children: [
       Container(
@@ -105,6 +105,7 @@ Column contactBox() {
         child: Column(
           children: [
             contactListBox(
+                isSkelton: isSkelton,
                 height: 40,
                 personWidget: interTightStyle(
                     text: "Person",
@@ -121,54 +122,69 @@ Column contactBox() {
                 isContactSmallTile: true),
             customDivider(height: 2, width: 327),
             contactListBox(
+                isSkelton: isSkelton,
                 height: 50,
                 personWidget: contactTileBox1(
+                    isSkelton: isSkelton,
                     imagePath: "assets/images/menImage2.png",
                     personName: "Jenny Wilson"),
                 companyWidget: contactTileBox2(
+                    isSkelton: isSkelton,
                     imagePath: "assets/logo/facebook_logo.png",
                     companyName: "Facebook"),
                 isContactSmallTile: false),
             customDivider(height: 2, width: 327),
             contactListBox(
+                isSkelton: isSkelton,
                 height: 50,
                 personWidget: contactTileBox1(
+                    isSkelton: isSkelton,
                     imagePath: "assets/images/lady3image.png",
                     personName: "Jenny Wilson"),
                 companyWidget: contactTileBox2(
+                    isSkelton: isSkelton,
                     imagePath: "assets/logo/klarna_logo.png",
                     companyName: "Klarna"),
                 rightP: 30,
                 isContactSmallTile: false),
             customDivider(height: 2, width: 327),
             contactListBox(
+                isSkelton: isSkelton,
                 height: 50,
                 personWidget: contactTileBox1(
+                    isSkelton: isSkelton,
                     imagePath: "assets/images/menImage1.png",
                     personName: "Jenny Wilson"),
                 companyWidget: contactTileBox2(
+                    isSkelton: isSkelton,
                     imagePath: "assets/logo/trello_logo.png",
                     companyName: "Trello"),
                 rightP: 35,
                 isContactSmallTile: false),
             customDivider(height: 2, width: 327),
             contactListBox(
+                isSkelton: isSkelton,
                 height: 50,
                 personWidget: contactTileBox1(
+                    isSkelton: isSkelton,
                     imagePath: "assets/images/ladyimage3.png",
                     personName: "Jenny Wilson"),
                 companyWidget: contactTileBox2(
+                    isSkelton: isSkelton,
                     imagePath: "assets/logo/xing_logo.png",
                     companyName: "Xling"),
                 rightP: 35,
                 isContactSmallTile: false),
             customDivider(height: 2, width: 327),
             contactListBox(
+                isSkelton: isSkelton,
                 height: 50,
                 personWidget: contactTileBox1(
+                    isSkelton: isSkelton,
                     imagePath: "assets/images/secondLadyimage.png",
                     personName: "Jenny Wilson"),
                 companyWidget: contactTileBox2(
+                    isSkelton: isSkelton,
                     imagePath: "assets/logo/sound_cloud.png",
                     companyName: "SoundClo"),
                 rightP: 5,
@@ -180,21 +196,31 @@ Column contactBox() {
   );
 }
 
-Row contactTileBox2({required String imagePath, required String companyName}) {
+Row contactTileBox2(
+    {required String imagePath,
+    required String companyName,
+    required bool isSkelton}) {
   return Row(
     children: [
-      imageAvatar(imagepath: imagePath, radius: 18),
+      isSkelton
+          ? const SizedBox()
+          : imageAvatar(imagepath: imagePath, radius: 18),
       const Gap(4),
-      interTightStyle(
-          text: companyName,
-          fontsize: 14,
-          weightFont: FontWeight.w500,
-          colorName: kBlack)
+      isSkelton
+          ? SizedBox()
+          : interTightStyle(
+              text: companyName,
+              fontsize: 14,
+              weightFont: FontWeight.w500,
+              colorName: kBlack)
     ],
   );
 }
 
-Row contactTileBox1({required String imagePath, required String personName}) {
+Row contactTileBox1(
+    {required String imagePath,
+    required String personName,
+    required bool isSkelton}) {
   return Row(
     children: [
       imageAvatar(
@@ -202,11 +228,33 @@ Row contactTileBox1({required String imagePath, required String personName}) {
         radius: 18,
       ),
       const Gap(12),
-      interTightStyle(
-          text: personName,
-          fontsize: 14,
-          weightFont: FontWeight.w500,
-          colorName: kBlack),
+      isSkelton
+          ? CustomBorderedBox(
+              height: 21,
+              width: 107,
+              borderRadius: 6,
+              noBorder: true,
+              color: kgrey100,
+            )
+          : interTightStyle(
+              text: personName,
+              fontsize: 14,
+              weightFont: FontWeight.w500,
+              colorName: kBlack),
+      isSkelton
+          ? Row(
+              children: [
+                const Gap(37),
+                CustomBorderedBox(
+                  height: 21,
+                  width: 50,
+                  borderRadius: 6,
+                  noBorder: true,
+                  color: kgrey100,
+                ),
+              ],
+            )
+          : const SizedBox()
     ],
   );
 }
@@ -216,10 +264,7 @@ SizedBox contactListBox({
   required Widget companyWidget,
   required double height,
   double? rightP,
-  // double? leftP,
-  // double? rightP,
-  // double? topP,
-  // double? bottomP,
+  required bool isSkelton,
   required bool isContactSmallTile,
 }) {
   return SizedBox(
@@ -240,19 +285,9 @@ SizedBox contactListBox({
                   height: 20, width: 20, borderRadius: 4, noBorder: false),
               const Gap(8),
               personWidget
-              // interTightStyle(
-              //     text: "Person",
-              //     fontsize: 14,
-              //     weightFont: FontWeight.w500,
-              //     colorName: hintTextColor),
             ],
           ),
           companyWidget
-          // interTightStyle(
-          //     text: "Company",
-          //     fontsize: 14,
-          //     weightFont: FontWeight.w500,
-          //     colorName: hintTextColor),
         ],
       ),
     ),

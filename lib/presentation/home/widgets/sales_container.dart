@@ -7,7 +7,12 @@ import '../../../widgets/footer_widget.dart';
 
 class SalesContainer extends StatelessWidget {
   const SalesContainer({
-    super.key, required this.smallIcon, required this.text, required this.pricevalue, required this.percentage, required this.isIncrement,
+    super.key,
+    required this.smallIcon,
+    required this.text,
+    required this.pricevalue,
+    required this.percentage,
+    required this.isIncrement,
   });
   final String smallIcon;
   final String text;
@@ -45,14 +50,14 @@ class SalesContainer extends StatelessWidget {
                         color: kwhite,
                         borderRadius: BorderRadius.circular(9),
                         border: Border.all(color: kborderColor),
-                        image:  DecorationImage(
-                          image: AssetImage(smallIcon),//small icon here
+                        image: DecorationImage(
+                          image: AssetImage(smallIcon), //small icon here
                         ),
                       ),
                     ),
                     const Gap(14),
                     interTightStyle(
-                        text: text,//text here
+                        text: text, //text here
                         fontsize: 14,
                         weightFont: FontWeight.w300,
                         colorName: hintTextColor),
@@ -61,7 +66,7 @@ class SalesContainer extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         interTightStyle(
-                            text: pricevalue,//price value here
+                            text: pricevalue, //price value here
                             fontsize: 19,
                             weightFont: FontWeight.w700,
                             colorName: kBlack),
@@ -99,7 +104,8 @@ class SalesContainer extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
-                child: PercentageBox(isIncrement: isIncrement, percentage: percentage),
+                child: PercentageBox(
+                    isIncrement: isIncrement, percentage: percentage),
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 8.0),
@@ -111,9 +117,9 @@ class SalesContainer extends StatelessWidget {
               )
             ],
           ),
-        ),Gap(24)
+        ),
+        Gap(24)
       ],
     );
   }
 }
-

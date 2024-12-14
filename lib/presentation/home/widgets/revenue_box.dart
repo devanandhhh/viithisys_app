@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:viithiisys_app/core/colors.dart';
+import 'package:viithiisys_app/presentation/home/widgets/custom_bordered_box.dart';
 import 'package:viithiisys_app/presentation/home/widgets/graph_widget.dart';
 import 'package:viithiisys_app/presentation/home/widgets/percentage_box.dart';
 
 import '../../../widgets/footer_widget.dart';
 
-Container revenueBox() {
+Container revenueBox({required bool isSkelton}) {
   return Container(
-    height: 375,
+    height: 379,
     width: 327,
     decoration: BoxDecoration(
       color: kwhite,
@@ -85,23 +86,39 @@ Container revenueBox() {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  interTightStyle(
-                      text: "\$23,569.00",
-                      fontsize: 20,
-                      weightFont: FontWeight.w600,
-                      colorName: kBlack),
-                  Row(
-                    children: [
-                      const PercentageBox(
-                          isIncrement: true, percentage: "10,5%"),
-                      const Gap(6),
-                      interTightStyle(
-                          text: "from last period",
-                          fontsize: 14,
-                          weightFont: FontWeight.w400,
-                          colorName: hintTextColor),
-                    ],
-                  ),
+                  isSkelton
+                      ? CustomBorderedBox(
+                          height: 31,
+                          width: 151,
+                          borderRadius: 6,
+                          noBorder: true,
+                          color: kgrey100,
+                        )
+                      : interTightStyle(
+                          text: "\$23,569.00",
+                          fontsize: 20,
+                          weightFont: FontWeight.w600,
+                          colorName: kBlack),
+                  isSkelton
+                      ? CustomBorderedBox(
+                          height: 31,
+                          width: 51,
+                          borderRadius: 6,
+                          noBorder: true,
+                          color: kgrey100,
+                        )
+                      : Row(
+                          children: [
+                            const PercentageBox(
+                                isIncrement: true, percentage: "10,5%"),
+                            const Gap(6),
+                            interTightStyle(
+                                text: "from last period",
+                                fontsize: 14,
+                                weightFont: FontWeight.w400,
+                                colorName: hintTextColor),
+                          ],
+                        ),
                 ],
               ),
               const Gap(8),
@@ -113,11 +130,19 @@ Container revenueBox() {
                       colorName: kmainColor,
                       borderRadius: 2),
                   const Gap(6),
-                  interTightStyle(
-                      text: "This period",
-                      fontsize: 13,
-                      weightFont: FontWeight.w400,
-                      colorName: hintTextColor),
+                  isSkelton
+                      ? CustomBorderedBox(
+                          height: 21,
+                          width: 68,
+                          borderRadius: 6,
+                          noBorder: true,
+                          color: kgrey100,
+                        )
+                      : interTightStyle(
+                          text: "This period",
+                          fontsize: 13,
+                          weightFont: FontWeight.w400,
+                          colorName: hintTextColor),
                   const Gap(12),
                   colorBox(
                       height: 8,
@@ -125,15 +150,23 @@ Container revenueBox() {
                       colorName: kbluelight,
                       borderRadius: 2),
                   const Gap(6),
-                  interTightStyle(
-                      text: "This period",
-                      fontsize: 13,
-                      weightFont: FontWeight.w400,
-                      colorName: hintTextColor)
+                  isSkelton
+                      ? CustomBorderedBox(
+                          height: 21,
+                          width: 68,
+                          borderRadius: 6,
+                          noBorder: true,
+                          color: kgrey100,
+                        )
+                      : interTightStyle(
+                          text: "This period",
+                          fontsize: 13,
+                          weightFont: FontWeight.w400,
+                          colorName: hintTextColor)
                 ],
               ),
               const Gap(8),
-              const KGraph()
+               KGraph(isSkelton:isSkelton)
             ],
           ),
         ),
@@ -146,7 +179,7 @@ Container colorBox(
         {required double height,
         required double width,
         required colorName,
-        required double borderRadius}) =>
+        required double borderRadius,}) =>
     Container(
       height: height,
       width: width,

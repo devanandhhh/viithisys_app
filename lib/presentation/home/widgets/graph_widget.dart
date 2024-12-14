@@ -5,9 +5,9 @@ import '../../../core/colors.dart';
 
 class KGraph extends StatelessWidget {
   const KGraph({
-    super.key,
+    super.key,required this.isSkelton
   });
-
+final bool isSkelton;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,6 +19,7 @@ class KGraph extends StatelessWidget {
             maxY: 25000,
             gridData: const FlGridData(show: true),
             lineBarsData: [
+              isSkelton?LineChartBarData()  :
               LineChartBarData(
                 spots: [
                   const FlSpot(0, 13000),
@@ -33,6 +34,7 @@ class KGraph extends StatelessWidget {
                 barWidth: 2,
                 color: kbluelight,
               ),
+              isSkelton?LineChartBarData()  :
               LineChartBarData(spots: [
                 const FlSpot(0, 15000),
                 const FlSpot(0.5, 18000),

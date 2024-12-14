@@ -104,6 +104,12 @@ flutter:
     - assets/images/ladyimage3.png
     - assets/logo/sound_cloud.png
     - assets/icons/callender7.png
+    - assets/icons/grey_download1.png
+    - assets/icons/grey_downarrow.png
+    - assets/icons/green_coin.png
+    - assets/icons/green_pig.png
+    - assets/icons/green_person.png
+    - assets/icons/green_msg.png
     
   #   - images/a_dot_ham.jpeg
 
